@@ -116,5 +116,4 @@ geom_text(aes(label = "span = 0.7", x = 400, y = 35), size = 5,
 
 
 ## Bibliografía
-
-bibliografia.bib
+@cleveland1992statistical
