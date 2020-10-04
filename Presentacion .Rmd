@@ -15,6 +15,9 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+# Introducción
+##
+
 # Definición
 ##
 <div style="text-align: justify">
@@ -38,17 +41,17 @@ Donde:
 ##
 <div style="text-align: justify">
 
-### SPAN
+### - SPAN
 Es el parámetro más importante y con mayor impacto en la regresión local. Su función es la de controlar la flexibilidad del ajuste. 
 
 * **Span menores:** Cuanto menor es el span, menor la fracción de observaciones vecinas empleadas en cada ajuste local y, por lo tanto, mayor flexibilidad del modelo.
 
 * **Span mayores:** Valores altos de span hacen que en cada ajuste local se empleen muchas observaciones vecinas generando un ajuste más robusto, pero menos flexible.
 
-### GRADO DEL POLINOMIO
+### - GRADO DEL POLINOMIO
 El polinomio local empleado para ajustar cada subset de datos suele ser siempre de primer o segundo grado, es decir, o bien un ajuste lineal o bien uno cuadrático. Aunque desde el punto de vista teórico se pueden emplear polinomios de mayor grado, estos tienden a producir overfit y reducen la precisión del modelo.
 
-### FUNCIÓN PARA DESIGNAR PESOS
+### - FUNCIÓN PARA DESIGNAR PESOS
 $$w(x)=(1-|x|^{3})^{3} \hspace{2cm} I[|x|<1] $$
 
 <div/>
@@ -131,7 +134,5 @@ geom_text(aes(label = "span = 0.7", x = 400, y = 35), size = 5,
 # Bibliografía
 ##
 
-@cleveland1992statistical
-@james2013introduction
-@ortiz2005modelamiento
+
 
