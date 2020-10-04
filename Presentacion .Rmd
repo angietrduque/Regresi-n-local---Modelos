@@ -2,7 +2,7 @@
 title: "*Regresión local (LOESS)*"
 author:  "Angie Rodríguez Duque & César Saavedra Vanegas"
 date: "Septiembre 2020"
-csl: vancouver.csl
+csl: apa.csl
 bibliography: ["bibliografia.bib"]
 output:
   ioslides_presentation:
@@ -115,5 +115,8 @@ geom_text(aes(label = "span = 0.7", x = 400, y = 35), size = 5,
 <div/>
 
 
-## Bibliografía
+# Bibliografía
+##
 @cleveland1992statistical
+@ortiz2005modelamiento
+
