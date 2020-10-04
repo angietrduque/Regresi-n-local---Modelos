@@ -21,8 +21,16 @@ knitr::opts_chunk$set(echo = FALSE)
 
 La regresión local (LOESS o LOWESS) es otra aproximación para obtener modelos no lineales. Se caracteriza por ajustar modelos simples a distintas subregiones del rango del predictor empleando únicamente las observaciones cercanas, evitando así recurrir a una única función global compleja. El concepto puede recordar al descrito en regression splines y smoothing splines, de hecho, es muy similar, la diferencia es que en la regresión local las regiones son solapantes, cosa que no ocurre en los otros dos métodos.
 
+$$Y_{i}=\mu(x_{i})+\epsilon_{i} $$
+Donde:
+
+* $\mu(x)$: Es una función desconodida
+
+* $\epsilon_{i}$: Es un término de error, que representa errores aleatorios en las observaciones o variabilidad de fuentes no incluidas en $x_{i}$.
+
 <div/>
 
+##
 <center>
 ![Regresión local, @james2013introduction](G1.png "Regresión local"){width=800px}
 
@@ -31,13 +39,17 @@ La regresión local (LOESS o LOWESS) es otra aproximación para obtener modelos 
 <div style="text-align: justify">
 
 ### SPAN
+Es el parámetro más importante y con mayor impacto en la regresión local. Su función es la de controlar la flexibilidad del ajuste. 
 
+* **Span menores:** Cuanto menor es el span, menor la fracción de observaciones vecinas empleadas en cada ajuste local y, por lo tanto, mayor flexibilidad del modelo.
+
+* **Span mayores:** Valores altos de span hacen que en cada ajuste local se empleen muchas observaciones vecinas generando un ajuste más robusto, pero menos flexible.
 
 ### GRADO DEL POLINOMIO
-
+El polinomio local empleado para ajustar cada subset de datos suele ser siempre de primer o segundo grado, es decir, o bien un ajuste lineal o bien uno cuadrático. Aunque desde el punto de vista teórico se pueden emplear polinomios de mayor grado, estos tienden a producir overfit y reducen la precisión del modelo.
 
 ### FUNCIÓN PARA DESIGNAR PESOS
-
+$$w(x)=(1-|x|^{3})^{3} \hspace{2cm} I[|x|<1] $$
 
 <div/>
 
@@ -86,6 +98,7 @@ Para cada posición x0 ocupada por una observación:
 ##
 <div style="text-align: justify">
 
+<center>
 ```{r echo=FALSE}
 library(ISLR)
 set.seed(1)
