@@ -24,7 +24,7 @@ La regresión local (LOESS o LOWESS) es otra aproximación para obtener modelos 
 <div/>
 
 <center>
-![Regresión local, Fuente: "An Introduction to Statistical Learning"](G1.png "Regresión local"){width=800px}
+![Regresión local, @james2013introduction](G1.png "Regresión local"){width=800px}
 
 # Parámetros
 ##
@@ -117,6 +117,8 @@ geom_text(aes(label = "span = 0.7", x = 400, y = 35), size = 5,
 
 # Bibliografía
 ##
+
 @cleveland1992statistical
+@james2013introduction
 @ortiz2005modelamiento
 
